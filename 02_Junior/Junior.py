@@ -19,10 +19,9 @@ from random import randint
 
 # print('\nДано число. Проверить кратно ли оно 7 и 23')
 # a = randint(0,1000)
-# if ( a % 7 == 0 and a % 23 == 0):
-#     print('число {} кратно 7 и 23'. format(a))
-# else:
-#     print('число {} не кратно 7 и 23'. format(a))
+# f = ( a % 7 == 0 and a % 23 == 0)
+# print(f)
+
 
 
 # print('\nДано число обозначающее день недели. Выяснить является номер дня недели выходным')
@@ -96,3 +95,11 @@ from math import sqrt
 # e = round(sqrt((ax - bx)**2 + (ay - by)**2 + (az - bz)**2),2)
 # print('расстояние между двумя точками в 2D -', d)
 # print('расстояние между двумя точками в 3D -', e)
+
+print('\nПроверить истинность утверждения ¬(X ⋁ Y v Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
+def logic(x,y,z):
+    return not(x or y or z) == (not x and not y and not z)
+for x in range (0,2):
+    for y in range (0,2):
+        for z in range (0,2):
+            print(logic(x,y,z))
