@@ -63,15 +63,51 @@
 # y = round(b2 * x + k2,2)
 # print (x, y)
 
-print('\nПоказать числа Фибоначчи')
-n = int(input('введите границу - '))
-a = 0
-b = 1
-print (a)
-print (b)
-for i in range (0, n):
-    c = a + b
-    print(c)
-    a = b
-    b = c
+# print('\nПоказать числа Фибоначчи')
+# n = int(input('введите границу - '))
+# a = 0
+# b = 1
+# print (a)
+# print (b)
+# for i in range (0, n):
+#     c = a + b
+#     print(c)
+#     a = b
+#     b = c
 
+# print('\nНаписать программу масштабирования фигуры')
+# a = str(input('введите координаты точек в формате ХХ,ХХ ХХ,ХХ -->> ')+' ')
+# array = []
+# k = int(input('введите коэфициент масштабирования фигуры -->> '))
+# def coordinates(a):
+#     l = len(a)
+#     temp_number = str()
+#     for i in range (0,l):
+#         if (a[i] >= '0' and a[i] <= '9'):
+#             temp_number += a[i]
+#         else:
+#             array.append(int(temp_number))
+#             temp_number = str()
+#     return (array)
+# coordinates(a)
+# print (array)
+# def scaling (array, k):
+#     result = ' '
+#     l = len(array) 
+#     for i in range (0, l):
+#         if i % 2 == 0:
+#             result = result + '(' + str(array[i]*k) + ','
+#         elif i % 2 != 0:
+#             result = result + str(array[i]*k) + ') '
+#     return(result)
+# print(scaling(array,k))
+
+print('\nНаписать программу копирования массива')
+a = [0,1,3,7,9]
+print(a,'\n')
+def array_copy (a):
+    new_array = []
+    for i in range (0, len(a)):
+        new_array.append(a[i])
+    return new_array
+print(array_copy(a))
