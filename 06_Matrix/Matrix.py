@@ -41,22 +41,44 @@ import random
 #     return (a)
 # print_matrix(sqr(new_array))
 
-print('\n53 В двумерном массиве показать позиции числа, заданного пользователем или указать, что такого элемента нет')
-double = [[ randint(0,10) for j in range (6)] for i in range (6)]
-x = int(input('введите число -->> '))
-def search_position (arr):
-    count = 0
-    for i in range (len(arr)):
-        for j in range (len(arr[i])):
-            if arr[i][j] == x: print('строка -- >> {}, ряд -->> {}'. format (i+1,j+1))
-            else: count += 1
-    if count == 0: print('искомого значения нет в массиве')
-print_matrix(double)
-search_position(double)
+# print('\n53 В двумерном массиве показать позиции числа, заданного пользователем или указать, что такого элемента нет')
+# double = [[ randint(0,10) for j in range (6)] for i in range (6)]
+# x = int(input('введите число -->> '))
+# def search_position (arr):
+#     count = 0
+#     for i in range (len(arr)):
+#         for j in range (len(arr[i])):
+#             if arr[i][j] == x: print('строка -- >> {}, ряд -->> {}'. format (i+1,j+1))
+#             else: count += 1
+#     if count == 0: print('искомого значения нет в массиве')
+# print_matrix(double)
+# search_position(double)
 
 
-# 54 В матрице чисел найти сумму элементов главной диагонали
-# 55 Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
+# print('\n54 В матрице чисел найти сумму элементов главной диагонали')
+# line = [[ randint(0,6) for j in range (3)] for i in range (5)]
+# print_matrix(line)
+# def diagonal (a):
+#     sum = 0
+#     for i in range (len(a)):
+#         for j in range (len(a[i])):
+#             if i == j: sum = sum+a[i][j]
+#     return sum
+# print(diagonal(line))
+
+# print('\n55 Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.')
+# arr = [[randint(0,10) for i in range (4)] for j in range (4)]
+# def average_of_line (a):
+#     for i in range (len(a)):
+#         av = 1
+#         sum = 0
+#         for j in range (len(a[i])):
+#             sum = sum + a[i][j]
+#         av = sum / len(a[i])
+#         print('среднее линии {} -->> {}'. format (i, av))
+# print_matrix(arr)
+# average_of_line(arr)
+
 # 56 Написать программу, которая обменивает элементы первой строки и последней строки
 # 57 Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
 # 58 Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить, что это невозможно (в случае, если матрица не квадратная).
