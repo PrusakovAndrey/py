@@ -1,13 +1,23 @@
 # Пользователь задаёт две строки. Определить количество 
 # вхождений одной строки в другой.
-a = input(str('-->>'))
-b = input(str('-->>'))
+atext = input(str('-->>'))
+btext = input(str('-->>'))
 
-def str_to_set (f):
-    res = set([])
-    for e in range (0,len(f)):
-        res.add(f[e])
-    return (res)
+from gettext import find
 
-c = (str_to_set(a)).intersection(str_to_set(b))
-print(len(c))
+def matching (atext, btext):
+    count = set([])
+    c = ''
+    if (atext.find(btext) == -1 and btext.find(atext) == -1): return False
+    elif btext.find(atext) == -1:
+        for i in range(len(atext)): 
+            c = atext.find(btext, i,len(atext))
+            count.add(c)
+        return len(count)-1
+    else:
+        for i in range(len(btext)): 
+            c = btext.find(atext, i,len(btext)) 
+            count.add(c)
+        return len(count)-1
+
+print(matching(atext, btext))

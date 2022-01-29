@@ -1,12 +1,10 @@
 # Подсчитать сумму цифр в вещественном числе.
 from random import randint
-x = randint(1000,10000)
+x = 2.87432
 
 def sum_of_number (a):
-    #print(a)
-    b = str(a)
     res = 0
-    for i in range (0,len(b)):
-        res += int(b[i])
-    return (res)
+    for i in str(a):
+        if i != '.': res += int(i)
+    return res
 print(sum_of_number(x))

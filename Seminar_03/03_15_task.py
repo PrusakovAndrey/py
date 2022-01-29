@@ -3,7 +3,12 @@
 # [ 1, 2, 6, 24 ]
 
 def high (f):
-    res = [1]
-    for e in range (0,f):
-        t = 
-        res.add
+    t = 1
+    res = list()
+    #[(res.append(e*t)) for e in range (1,f+1)]
+    for e in range (1,f+1): 
+        t = e*t
+        res.append(t)
+    return res
+
+print (high(6))
