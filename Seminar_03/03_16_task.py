@@ -5,6 +5,7 @@ def tsk16 (f):
     res = 0
     for e in range (1,f+1):
         res += (1+1/e) ** e
+        print (res)
     return(res)
 
-print(tsk16(55))
+print(tsk16(4))
