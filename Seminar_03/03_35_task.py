@@ -1,21 +1,30 @@
 # В файле находится N натуральных чисел, записанных через пробел. 
 # Среди чисел не хватает одного, чтобы выполнялось условие A[i] - 1 = A[i-1]. Найти его.
 
-a = str('10 6 4 8 9 5')
+path = '/Users/andreyprusakov/Desktop/GB projects/python/Seminar_03/35_task.txt'
 
-a = str('12 24 789 1 7')
+def reading (path):
+    f = open(path, 'r')
+    data = f.read() + ' '
+    f.close()
+    return data
+file = str((reading(path)))
 
-def max_min (a):
-    b = []
-    temp = str()
-    for i in range (0,len(a)):
-        if a[i] != ' ':
-            temp += str(a[i])
-        else: 
-            b.append(temp)
-            temp = str()
-    return [max(b), min(b)]
+def list_creating (data):
+    numbers = []
+    while data != '':
+        space_pos = data.index(' ')
+        numbers.append(int(data[:space_pos]))
+        data = data[space_pos+1:]
+    return numbers
 
-print (max_min(a))
+lst = list_creating(file)
+lst = sorted(lst)
+print(lst)
 
-
+def check (list):
+    for i in range (len(list)):
+        if (list[i] - 1) != list[i-1]:
+            res = list[i-1] + 1
+    return res
+print (check(lst))

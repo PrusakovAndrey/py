@@ -1,8 +1,4 @@
 # Составить список простых множителей натурального числа N
-
-
-n = 100
-
 def task31 (n):
     i = 2
     array = []
@@ -15,4 +11,4 @@ def task31 (n):
             i += 1
     return (array)
 
-print (task31 (n))
+print (task31 (75973411))
