@@ -4,17 +4,17 @@
 #    [5, 2, 3, 4, 6, 1, 7] => [2, 3, 4, 6, 7]
 # Порядок элементов менять нельзя
 
-ls = [5, 2, 3, 4, 6, 1, 7] #, 9, 8, 10]
+ls = [10,1,5,10] # [10, 5, 2, 3, 4, 6, 1, 7, 9, 8, 10]
 
-def trend (str):
-    ch_indx = min(str[0],str[1],str[2])
+def trend (st):
+    ch_indx = min(st[0],st[1],st[2])
     res = [ch_indx]
-    for i in range (2,len(str)):
-        if str[i-2]>ch_indx and str[i-2]<max(str[i-1], str[i]):
-            res.append(str[i-2])
-            ch_indx = str[i-2]
-        if str[i] == max(str):
-            res.append(str[i])
+    for i in range (2,len(st)):
+        if st[i-2]>ch_indx and st[i-2]<max(st[i-1], st[i]):
+            res.append(st[i-2])
+            ch_indx = st[i-2]
+        if st[i] == max(st):
+            res.append(st[i])
             break
     return res
 print(trend(ls))
