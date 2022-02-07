@@ -11,4 +11,4 @@ def task31 (n):
             i += 1
     return (array)
 
-print (task31 (75973411))
+print (task31 (8792))

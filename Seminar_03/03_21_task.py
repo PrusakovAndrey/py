@@ -1,11 +1,14 @@
 # Определить, позицию второго вхождения строки в списке либо сообщить, что его нет.
 
-a 
 x = 'AND'
-a =['AND', 'b jkasnc']
-#a = ['23456ANDX12', 'AND', 'bahjnivkasANDlamvek', '18946yrhjknw', 'AND']
+a =['AND', 'b jkasnc', 'and', 'bahfdjcn', 'AND', 'and']
 
+def searching (x,a):
+    count = 0
+    for i in range (len(a)):
+        if a[i] == x: count +=1
+        if count == 2:
+            return ([i])
+    else: return ('not found')
 
-
-
-print(a.index(x, a.index(x)+1))
+print(searching(x,a))
