@@ -1,7 +1,6 @@
 # Реализовать RLE алгоритм. реализовать модуль сжатия и восстановления данных.
 # входные и выходные данные хранятся в отдельных текстовых файлах
 
-
 path = '/Users/andreyprusakov/Desktop/GB projects/python/Seminar_03/42_coded.txt'
 def reading (path):
     f = open(path, 'r')
@@ -9,25 +8,27 @@ def reading (path):
     f.close()
     return data
 
-a = (reading(path))
-print(a)
-def cortej (code):
-    for i in range (0, len(code)):
-        if code[i] == char:
+line = (reading(path))
 
-        else:
-            
+def splitting_to_tuple (a):
+    a = a + ' '
+    n = '0,1,2,3,4,5,6,7,9'
+    c = ''
+    res = []
+    r = ''
+    for i in range (len(a)):
+        if (a[i-1] in n and a[i] not in n and i > 0) or i == len(a):
+            c = int(c)
+            res.append((r,c))
+            c = ''
+        if a[i] not in n: r = a[i]
+        if a[i] in n: c += a[i]
+    return res
 
-def run_length_encoding(seq):
-    compressed = []
-    count = 1
-    char = seq[0]
-    for i in range(1,len(seq)):
-        if seq[i] == char:
-            count = count + 1
-        else :
-            compressed.append([char,count])
-            char = seq[i]
-            count = 1
-    compressed.append([char,count])
-    return compressed
+def printing (dt):
+    str = ''
+    for i in range (len(dt)):
+        str += dt[i][0]*dt[i][1] 
+    return str
+
+print (printing(splitting_to_tuple(line)))

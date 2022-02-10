@@ -4,17 +4,45 @@
 #    [5, 2, 3, 4, 6, 1, 7] => [2, 3, 4, 6, 7]
 # Порядок элементов менять нельзя
 
-ls = [10,1,5,10] # [10, 5, 2, 3, 4, 6, 1, 7, 9, 8, 10]
+ls = [1, 2, 13, 6, 2, 4, 6, 1, 7, 9, 8, 10]
 
-def trend (st):
-    ch_indx = min(st[0],st[1],st[2])
-    res = [ch_indx]
-    for i in range (2,len(st)):
-        if st[i-2]>ch_indx and st[i-2]<max(st[i-1], st[i]):
-            res.append(st[i-2])
-            ch_indx = st[i-2]
-        if st[i] == max(st):
-            res.append(st[i])
-            break
-    return res
-print(trend(ls))
+# def trend (a):
+#     f = [0] * len(a)
+#     prev = [-1] * len(a)
+#     for i in range (len(a)):
+#         m = 0
+#         for j in range (i):
+#             if a[j] < a[i] and f[j] >= m:
+#                 m = f[j]
+#                 prev[i] = j
+#             f[i] = m + 1
+#     ans = []
+#     i = f.index(max(f))
+#     ans.append(a[i])
+#     while prev[i] != -1:
+#         i = prev[i]
+#         ans.append(a[i])
+#     return ans [::-1]
+# print(trend(ls))
+
+# def trend (a):
+#     f = [0] * len(a)
+#     for i in range (len(a)):
+#         m = 0
+#         for j in range (i):
+#             if a[j] < a[i] and f[j] >= m:
+#                 m = f[j]
+#             f[i] = m + 1
+#     ans = []
+#     i = f.index(max(f))
+#     ans.append(a[i])
+#     while f[i] > 1:
+#          #ищем a[j]:a[j] < a[i] and f[j] == f[i] - 1
+#          j = i - 1
+#          while (a[j] >= a[i] or f[j] != f[i] - 1): #  пока не нашли 
+#             j -=1
+#          ans.append(a[j])
+#          i = j
+#     return ans [::-1]
+# print(trend(ls))
+
